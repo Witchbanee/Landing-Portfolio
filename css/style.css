@@ -1,0 +1,278 @@
+/* Шрифты */
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Bold.woff2") format("woff2");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Medium.woff") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+
+/* Общие */
+
+body {
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 944px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Шапка */
+
+header {
+  margin-bottom: 106px;
+}
+
+hr {
+  max-width: 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 34px;
+  margin-bottom: 32px;
+}
+
+hr {
+  border-bottom: 1px solid #828282;
+  width: 941px;
+}
+
+.navigation__item {
+  font-weight: bold;
+  color: #828282;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.navigation__item:hover {
+  color: black;
+}
+
+h1 {
+  width: 124px;
+  font-size: 47px;
+  line-height: 59px;
+}
+
+.header__fix {
+  display: flex;
+  padding-top: 50px;
+  justify-content: space-between;
+}
+
+.header__paragraph {
+  width: 166px;
+  align-self: flex-end;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  color: black;
+  margin-right: 26px;
+  margin-bottom: 16px;
+}
+
+.header__paragraph--switcher {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transform: rotate(-90deg);
+  width: 82px;
+  margin-bottom: 27px;
+  margin-right: -29px;
+}
+
+.header__paragraph--switcher-active {
+  color: black;
+}
+
+.header__paragraph--switcher--inactive {
+  color: #828282;
+}
+
+.header__image-main {
+  padding-top: 30px;
+  max-width: 100%;
+}
+
+/* section - 1 */
+
+h2 {
+  font-size: 34px;
+  line-height: 42px;
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 40px;
+}
+
+.about-me {
+  background-color: #f6f6f6;
+  height: 506px;
+  width: 100%;
+}
+
+.about-me__info {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+/* section - 2 */
+
+.about-me__title {
+  padding-top: 91px;
+}
+
+.skills_paragraph {
+  text-align: center;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.skills__list {
+  display: flex;
+  padding-top: 50px;
+  justify-content: space-between;
+  margin-bottom: 112px;
+}
+
+.skills__list-paragraph {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.skills__list-item {
+  text-align: center;
+}
+
+.skills__list-stars {
+  padding-left: 11px;
+}
+
+.first--star {
+  padding-left: 0;
+}
+
+/* section - 3 */
+
+.portfolio {
+  background: #f6f6f6;
+  height: 2253px;
+}
+
+.portfolio__list {
+  text-align: center;
+}
+
+.portfolio__list-item {
+  padding-bottom: 10px;
+}
+
+.portfolio__link-image {
+  padding-bottom: 20px;
+}
+
+.portfolio__link {
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: underline;
+  display: block;
+  padding-top: 25px;
+  margin-bottom: 100px;
+  color: black;
+  text-align: center;
+}
+
+.portfolio__link:hover {
+  color: #828282;
+}
+
+.portfolio__image {
+  max-width: 100%;
+}
+
+/* footer */
+
+.footer__slogan {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  text-align: center;
+  width: 275px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.footer__button {
+  font-size: 18px;
+  line-height: 22px;
+  background: #070707;
+  color: white;
+  width: 180px;
+  display: block;
+  text-align: center;
+  padding: 13px;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+.footer__button:hover {
+  background-color: #828282;
+}
+
+.footer__list {
+  display: flex;
+  justify-content: center;
+  padding-top: 86px;
+  padding-bottom: 46px;
+}
+
+.footer__list-item {
+  padding-left: 62px;
+}
+
+.footer__slogan-down {
+  color: #828282;
+  text-align: center;
+  width: 243px;
+  margin: 0 auto;
+}
+
+
+/* адаптив */
