@@ -37,10 +37,10 @@ body {
 }
 
 .container {
-  /* width: 100%; */
+  
   max-width: 944px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 29px;
 }
 
 ul {
@@ -124,8 +124,13 @@ h1 {
 }
 
 .header__image-main {
-  padding-top: 30px;
+  padding-top: 55px;
   max-width: 100%;
+  height: auto;
+}
+
+.header__image-main--mobile {
+  display: none;
 }
 
 /* section - 1 */
@@ -221,8 +226,6 @@ h2 {
   text-align: center;
 }
 
-
-
 .portfolio__link:hover {
   color: #828282;
   transition: color .2s linear
@@ -289,4 +292,36 @@ h2 {
   .skills__list-item {
     padding-bottom: 82px;
   }
+}
+
+@media (max-width: 355px) {
+  .footer__list-item {
+    padding-left: 32px;
+  }
+}
+
+@media (max-width: 475px) {
+  .header__image-main--mobile {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    padding-top: 40px;
+    width: 100%;
+  }
+  .header__image-main {
+    display: none;
+  }
+  .navigation, hr, .header__paragraph--switcher {
+    display: none;
+  }
+  .header__fix {
+    flex-direction: column;
+  }
+
+  .header__paragraph {
+    align-self: auto;
+  }
+
+  h1 {
+    padding-bottom: 30px;
 }
