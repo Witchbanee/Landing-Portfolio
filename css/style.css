@@ -37,7 +37,6 @@ body {
 }
 
 .container {
-  
   max-width: 944px;
   margin: 0 auto;
   padding: 0 29px;
@@ -317,11 +316,10 @@ h2 {
   .header__fix {
     flex-direction: column;
   }
-
   .header__paragraph {
     align-self: auto;
   }
-
   h1 {
     padding-bottom: 30px;
+  }
 }
