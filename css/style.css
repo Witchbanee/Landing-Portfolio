@@ -60,7 +60,7 @@ hr {
   max-width: 100%;
 }
 
-.navigation {
+.navigation__main {
   display: flex;
   justify-content: space-between;
   padding-top: 34px;
@@ -130,6 +130,78 @@ h1 {
 
 .header__image-main--mobile {
   display: none;
+}
+
+/* сэндвич */
+
+.nav-button {
+  display: none;
+}
+
+.nav__line {
+  display: block;
+  height: 4px;
+  width: 33px;
+  background: black;
+  top: 47px;
+  /* left: 31px;
+  right: 31px; */
+  
+}
+
+.nav__line::after, .nav__line::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: black;
+  transition: 0.2s;
+}
+
+
+
+
+.nav__line--open {
+  display: block;
+  height: 4px;
+  width: 33px;
+  background: rgb(255, 255, 255);
+  top: 47px;
+  transition: 0.3s ease 0s;
+  
+}
+
+
+ .nav__line--open::before {
+  transform:  rotate( 45deg) ;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: black;
+  transition: 0.3s ease 0s;
+}
+
+.nav__line--open::after {
+  
+  transform: rotate( -45deg) ;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: black;
+  transition: 0.3s ease 0s;
+} 
+
+.nav__line::after {
+  top: -10px;
+}
+
+.nav__line::before {
+  bottom: -10px;
 }
 
 /* section - 1 */
@@ -293,7 +365,7 @@ h2 {
   }
 }
 
-@media (max-width: 355px) {
+@media (max-width: 410px) {
   .footer__list-item {
     padding-left: 32px;
   }
@@ -310,7 +382,7 @@ h2 {
   .header__image-main {
     display: none;
   }
-  .navigation, hr, .header__paragraph--switcher {
+  .navigation__main, hr, .header__paragraph--switcher {
     display: none;
   }
   .header__fix {
@@ -322,4 +394,36 @@ h2 {
   h1 {
     padding-bottom: 30px;
   }
+  .nav-button {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 74px;
+  }
+  .navigation__item {
+    font-weight: bold;
+    color: #828282;
+    font-size: 34px;
+    line-height: 42px;
+  }
+}
+
+/* .navigation__main {
+  display: none;
+}  */
+
+.navigation--mobile {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding-top: 66px;
+  padding-left: 26px;
+  padding-bottom: 40vh;
+}
+
+.position {
+  position: fixed;
 }
