@@ -72,14 +72,14 @@ hr {
   width: 941px;
 }
 
-.navigation__item {
+.navigation__link {
   font-weight: bold;
   color: #828282;
   font-size: 18px;
   line-height: 22px;
 }
 
-.navigation__item:hover {
+.navigation__link:hover {
   color: black;
 }
 
@@ -118,7 +118,7 @@ h1 {
   color: black;
 }
 
-.header__paragraph--switcher--inactive {
+.header__paragraph--switcher-inactive {
   color: #828282;
 }
 
@@ -144,9 +144,6 @@ h1 {
   width: 33px;
   background: black;
   top: 47px;
-  /* left: 31px;
-  right: 31px; */
-  
 }
 
 .nav__line::after, .nav__line::before {
@@ -159,9 +156,6 @@ h1 {
   transition: 0.2s;
 }
 
-
-
-
 .nav__line--open {
   display: block;
   height: 4px;
@@ -169,12 +163,10 @@ h1 {
   background: rgb(255, 255, 255);
   top: 47px;
   transition: 0.3s ease 0s;
-  
 }
 
-
- .nav__line--open::before {
-  transform:  rotate( 45deg) ;
+.nav__line--open::before {
+  transform: rotate( 45deg);
   content: "";
   display: block;
   position: absolute;
@@ -185,8 +177,7 @@ h1 {
 }
 
 .nav__line--open::after {
-  
-  transform: rotate( -45deg) ;
+  transform: rotate( -45deg);
   content: "";
   display: block;
   position: absolute;
@@ -194,7 +185,7 @@ h1 {
   height: 4px;
   background: black;
   transition: 0.3s ease 0s;
-} 
+}
 
 .nav__line::after {
   top: -10px;
@@ -351,6 +342,7 @@ h2 {
   text-align: center;
   width: 243px;
   margin: 0 auto;
+  padding-bottom: 130px;
 }
 
 /* адаптив */
@@ -379,10 +371,8 @@ h2 {
     padding-top: 40px;
     width: 100%;
   }
-  .header__image-main {
-    display: none;
-  }
-  .navigation__main, hr, .header__paragraph--switcher {
+
+  .navigation__main, hr, .header__paragraph--switcher, .header__image-main {
     display: none;
   }
   .header__fix {
@@ -400,30 +390,32 @@ h2 {
     right: 30px;
     top: 74px;
   }
-  .navigation__item {
+  .navigation__link {
     font-weight: bold;
     color: #828282;
     font-size: 34px;
     line-height: 42px;
   }
-}
-
-/* .navigation__main {
+  .navigation__main {
+    justify-content: start;
+  }
+  .navigation__item {
+    padding-bottom: 70px;
+  }
+  /* .navigation__main {
   display: none;
 }  */
-
-.navigation--mobile {
-  display: flex;
-  position: fixed;
-  flex-direction: column;
-  background-color: white;
-  width: 100%;
-  height: 100%;
-  padding-top: 66px;
-  padding-left: 26px;
-  padding-bottom: 40vh;
-}
-
-.position {
-  position: fixed;
-}
+  .navigation--mobile {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding-top: 66px;
+    padding-left: 26px;
+    padding-bottom: 40vh;
+  }
+  .position {
+    position: fixed;
+  }
