@@ -128,9 +128,6 @@ h1 {
   height: auto;
 }
 
-.header__image-main--mobile {
-  display: none;
-}
 
 /* сэндвич */
 
@@ -143,56 +140,40 @@ h1 {
   height: 4px;
   width: 33px;
   background: black;
-  top: 47px;
 }
 
-.nav__line::after, .nav__line::before {
+.nav__line--1, .nav__line--3 {
+  transition: 0.3s;
+}
+
+.nav__line--2, .nav__line--3 {
+  margin-top: 4px;
+}
+
+.nav-close .nav__line--1 {
+  transform: translateX(6px) rotate(45deg) translateY(9px);
   content: "";
   display: block;
   position: absolute;
-  width: 100%;
-  height: 4px;
-  background: black;
-  transition: 0.2s;
-}
-
-.nav__line--open {
-  display: block;
-  height: 4px;
   width: 33px;
-  background: rgb(255, 255, 255);
-  top: 47px;
-  transition: 0.3s ease 0s;
-}
-
-.nav__line--open::before {
-  transform: rotate( 45deg);
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
   height: 4px;
   background: black;
   transition: 0.3s ease 0s;
 }
 
-.nav__line--open::after {
-  transform: rotate( -45deg);
+.nav-close .nav__line--3 {
+  transform: translateX(6px) rotate( -45deg) translateY(-9px);
   content: "";
   display: block;
   position: absolute;
-  width: 100%;
+  width: 33px;
   height: 4px;
   background: black;
   transition: 0.3s ease 0s;
 }
 
-.nav__line::after {
-  top: -10px;
-}
-
-.nav__line::before {
-  bottom: -10px;
+.nav-close .nav__line--2 {
+  visibility: hidden;
 }
 
 /* section - 1 */
@@ -262,7 +243,6 @@ h2 {
 
 .portfolio {
   background: #f6f6f6;
-  /* height: 2253px; */
 }
 
 .portfolio__list {
@@ -304,7 +284,6 @@ h2 {
   line-height: 22px;
   font-weight: 500;
   text-align: center;
-  width: 275px;
   margin: 0 auto;
   padding-bottom: 30px;
 }
@@ -324,6 +303,7 @@ h2 {
 
 .footer__button:hover {
   background-color: #828282;
+  transition: 0.3s;
 }
 
 .footer__list {
@@ -340,7 +320,6 @@ h2 {
 .footer__slogan-down {
   color: #828282;
   text-align: center;
-  width: 243px;
   margin: 0 auto;
   padding-bottom: 130px;
 }
@@ -364,15 +343,7 @@ h2 {
 }
 
 @media (max-width: 475px) {
-  .header__image-main--mobile {
-    display: block;
-    margin: 0 auto;
-    height: auto;
-    padding-top: 40px;
-    width: 100%;
-  }
-
-  .navigation__main, hr, .header__paragraph--switcher, .header__image-main {
+  .navigation__main, hr, .header__paragraph--switcher {
     display: none;
   }
   .header__fix {
@@ -388,7 +359,7 @@ h2 {
     display: block;
     position: absolute;
     right: 30px;
-    top: 74px;
+    top: 70px;
   }
   .navigation__link {
     font-weight: bold;
@@ -402,12 +373,8 @@ h2 {
   .navigation__item {
     padding-bottom: 70px;
   }
-  /* .navigation__main {
-  display: none;
-}  */
   .navigation--mobile {
     display: flex;
-    position: fixed;
     flex-direction: column;
     background-color: white;
     width: 100%;
@@ -419,3 +386,4 @@ h2 {
   .position {
     position: fixed;
   }
+}
