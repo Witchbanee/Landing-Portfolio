@@ -38,6 +38,7 @@ body {
 
 .container {
   max-width: 944px;
+  min-width: 280px;
   margin: 0 auto;
   padding: 0 29px;
 }
